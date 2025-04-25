@@ -2,7 +2,9 @@
 
 import * as React from 'react';
 import type { ThemeOptions } from '@mui/material/styles';
-import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+// import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
 import { inputsCustomizations } from './customizations/inputs';
 import { dataDisplayCustomizations } from './customizations/dataDisplay';
 import { feedbackCustomizations } from './customizations/feedback';
@@ -25,7 +27,7 @@ export default function AppTheme(props: AppThemeProps) {
       },
       colorSchemes,
       typography: {
-        fontFamily: 'var(--font-roboto)',
+        fontFamily: 'Inter, sans-serif',
       },
       shadows,
       shape,
@@ -42,7 +44,7 @@ export default function AppTheme(props: AppThemeProps) {
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      <CssBaseline enableColorScheme/>
       {children}
     </ThemeProvider>
   )

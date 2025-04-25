@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { Roboto } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import AppTheme from '@/theme/AppTheme';
 import AppNavBar from "@/components/AppNavBar/AppNavBar";
 
-const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
+const inter = Inter({
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -23,11 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.variable}>
+      <body className={inter.variable} suppressHydrationWarning>
         <AppRouterCacheProvider>
           <AppTheme>
-          <AppNavBar />
-            {children}
+              <AppNavBar />
+                {children}
           </AppTheme>
         </AppRouterCacheProvider>
       </body>

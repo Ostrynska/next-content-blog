@@ -73,6 +73,7 @@ export default function Hero() {
               flexDirection: { xs: 'column', sm: 'row' },
               alignItems: 'center',
               fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+              fontWeight: 600,
             }}
           >
             Our&nbsp;latest&nbsp;
@@ -81,6 +82,7 @@ export default function Hero() {
               variant="h1"
               sx={(theme) => ({
                 fontSize: 'inherit',
+                fontWeight: 'inherit',
                 color: 'primary.main',
                 ...theme.applyStyles('dark', {
                   color: 'primary.light',
@@ -95,6 +97,7 @@ export default function Hero() {
               textAlign: 'center',
               color: 'text.secondary',
               width: { sm: '100%', md: '80%' },
+              fontSize: '0.875rem'
             }}
           >
             Explore our cutting-edge dashboard, delivering high-quality solutions
